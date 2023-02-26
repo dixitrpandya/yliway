@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import * as Scroll from "react-scroll";
 import Button from "../Button";
 import Container from "../Container";
 import SectionHeader from "../SectionHeader";
@@ -6,7 +7,15 @@ import SlickSlider from "../SlickSlider";
 
 import styles from "./OpenPositions.module.scss";
 
+let ScrollLink = Scroll.Link;
+
+let Element = Scroll.Element;
+
 export default function OpenPositions() {
+  const [openContact, setOpenContact] = useState(false);
+  function handleOpenContact() {
+    setOpenContact(!openContact);
+  }
   return (
     <>
       <section className={styles.open}>
@@ -110,7 +119,19 @@ export default function OpenPositions() {
                 </div>
               </div>
               <div className="job-item__button">
-                <Button className={"button--purple"}>APPLY</Button>
+                <ScrollLink
+                  to="jobform"
+                  spy={true}
+                  smooth={true}
+                  duration={500}
+                >
+                  <Button
+                    className={"button--purple"}
+                    onClick={handleOpenContact}
+                  >
+                    APPLY
+                  </Button>
+                </ScrollLink>
               </div>
             </div>
             <div className="job-item">
@@ -197,72 +218,89 @@ export default function OpenPositions() {
                 </div>
               </div>
               <div className="job-item__button">
-                <Button className={"button--purple"}>APPLY</Button>
+                <ScrollLink
+                  to="jobform"
+                  spy={true}
+                  smooth={true}
+                  duration={500}
+                >
+                  <Button
+                    className={"button--purple"}
+                    onClick={handleOpenContact}
+                  >
+                    APPLY
+                  </Button>
+                </ScrollLink>
               </div>
             </div>
           </SlickSlider>
         </Container>
       </section>
-      <section className="contact">
-        <Container>
-          <SectionHeader
-            subText={"CONTACT"}
-            title={"Get In <span class='text-purple d-block'>Touch</span>"}
-          ></SectionHeader>
-          <div className="contact-wrap">
-            <div className="row">
-              <div className="col-12 col-xl-2 col-md-4">
-                <div className="contact__item">
-                  <div className="contact__icon"></div>
-                  <div className="contact__name">Office</div>
-                  <div className="contact__info">
-                    YLIWAY <br /> Via Cassia, <br /> 1081 00189 Rome (Italy)
+
+      <Element name="jobform">
+        <section className={`contact ${openContact ? "is-show" : ""}`}>
+          <Container>
+            <SectionHeader
+              subText={"CONTACT"}
+              title={"Get In <span class='text-purple d-block'>Touch</span>"}
+            ></SectionHeader>
+            <div className="contact-wrap">
+              <div className="row">
+                <div className="col-12 col-xl-2 col-md-4">
+                  <div className="contact__item">
+                    <div className="contact__icon"></div>
+                    <div className="contact__name">Office</div>
+                    <div className="contact__info">
+                      YLIWAY <br /> Via Cassia, <br /> 1081 00189 Rome (Italy)
+                    </div>
+                  </div>
+                  <div className="contact__item">
+                    <div className="contact__icon"></div>
+                    <div className="contact__name">Email</div>
+                    <div className="contact__info">meera@yliway.com</div>
                   </div>
                 </div>
-                <div className="contact__item">
-                  <div className="contact__icon"></div>
-                  <div className="contact__name">Email</div>
-                  <div className="contact__info">meera@yliway.com</div>
+                <div className="col-12 col-xl-8 col-md-8 ms-auto">
+                  <form className="contact-form">
+                    <div className="form-group">
+                      <input
+                        className="form-control"
+                        placeholder="Name"
+                        type="text"
+                      />
+                    </div>
+                    <div className="form-group">
+                      <input
+                        className="form-control"
+                        placeholder="Email"
+                        type="email"
+                      />
+                    </div>
+                    <div className="form-group">
+                      <input
+                        className="form-control"
+                        placeholder="Name"
+                        type="text"
+                      />
+                    </div>
+                    <div className="form-group">
+                      <textarea
+                        className="form-control"
+                        placeholder="Message"
+                      ></textarea>
+                    </div>
+                    <div className="text-center">
+                      <Button className={"button--purple"}>
+                        SUBMIT MESSAGE
+                      </Button>
+                    </div>
+                  </form>
                 </div>
-              </div>
-              <div className="col-12 col-xl-8 col-md-8 ms-auto">
-                <form className="contact-form">
-                  <div className="form-group">
-                    <input
-                      className="form-control"
-                      placeholder="Name"
-                      type="text"
-                    />
-                  </div>
-                  <div className="form-group">
-                    <input
-                      className="form-control"
-                      placeholder="Email"
-                      type="email"
-                    />
-                  </div>
-                  <div className="form-group">
-                    <input
-                      className="form-control"
-                      placeholder="Name"
-                      type="text"
-                    />
-                  </div>
-                  <div className="form-group">
-                    <textarea
-                      className="form-control"
-                      placeholder="Message"
-                    ></textarea>
-                  </div>
-                  <div className="text-center">
-                    <Button className={"button--purple"}>SUBMIT MESSAGE</Button>
-                  </div>
-                </form>
               </div>
             </div>
-          </div>
-        </Container>
-      </section>
+          </Container>
+        </section>
+      </Element>
     </>
   );
 }

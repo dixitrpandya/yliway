@@ -58,7 +58,13 @@ textarea.form-control {
 
 .contact {
   padding-bottom: 90px;
+  padding-top: 90px;
+  display: none;
+  &.is-show {
+    display: block;
+  }
   @include desktop {
+    padding-top: 80px;
     padding-bottom: 70px;
   }
   &-form {
