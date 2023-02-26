@@ -1,0 +1,48 @@
+@import "./../../styles/variables";
+
+.header {
+  position: absolute;
+  z-index: 9;
+  left: 0;
+  right: 0;
+  top: 0;
+  width: 100%;
+  padding: 15px 0;
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include desktop {
+      position: relative;
+    }
+  }
+
+  .header__logo {
+    position: relative;
+    margin-top: -8px;
+    z-index: 1;
+
+    @include phone-landscape {
+      img {
+        height: 56px;
+      }
+    }
+  }
+
+  .button {
+    &--buy {
+      margin-left: auto;
+      @include desktop {
+        padding: 15px 20px;
+        margin-right: 10px;
+      }
+    }
+  }
+
+  &Fixed {
+    position: fixed;
+    background-color: $pure-white;
+    box-shadow: 0 3px 0 0 $purple;
+  }
+}

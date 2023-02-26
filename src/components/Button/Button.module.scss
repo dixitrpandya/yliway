@@ -1,0 +1,79 @@
+@import "./../../styles/variables";
+
+%ButtonHover {
+  transform: translateY(-2px);
+}
+
+.button {
+  padding: 21px 35px;
+  font-size: 18px;
+  font-family: $font-barlow;
+  font-weight: 500;
+  line-height: 1;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  background-color: transparent;
+  border: none;
+  border-radius: 60px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
+    color 0.15s ease-in-out, box-shadow 0.15s ease-in-out,
+    transform 0.15s ease-in-out;
+  outline: none;
+  position: relative;
+  z-index: 1;
+
+  @include desktop {
+    font-size: 16px;
+    padding: 18px 24px;
+  }
+
+  .sb-icon {
+    margin-right: 15px;
+    @include desktop {
+      margin-right: 10px;
+    }
+    &.shibari-icon {
+      margin-top: -4px;
+      margin-bottom: -4px;
+    }
+  }
+
+  &--purple {
+    background-color: $purple;
+    color: $pure-white;
+    &:hover {
+      @extend %ButtonHover;
+    }
+  }
+
+  &--modalClose {
+    padding: 0;
+    border: none;
+    width: 32px;
+    height: 32px;
+    margin-left: auto;
+    &:hover {
+      color: $purple;
+    }
+  }
+}
+
+.nav__btnToggle {
+  border-radius: 0;
+  padding: 0;
+  width: 34px;
+  height: 34px;
+  z-index: 99;
+  display: none;
+  box-shadow: none !important;
+  @include desktop {
+    display: block;
+  }
+}

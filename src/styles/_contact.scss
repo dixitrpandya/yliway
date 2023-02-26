@@ -1,0 +1,104 @@
+.form-group {
+  margin-bottom: 30px;
+  @include phone-landscape {
+    margin-bottom: 16px;
+  }
+}
+
+.form-control {
+  display: block;
+  height: 105px;
+  width: 100%;
+  padding: 18px 60px;
+  font-size: 24px;
+  font-weight: 500;
+  color: $pure-black;
+  background-color: #f8f8f8;
+  background-clip: padding-box;
+  border: 1px solid #e8e8e8;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 35px;
+  transition: all 0.15s ease-in-out;
+  outline: none;
+  box-shadow: none;
+
+  @include desktop {
+    height: 85px;
+    padding: 18px 40px;
+    font-size: 22px;
+  }
+
+  @include phone-landscape {
+    height: 50px;
+    font-size: 16px;
+    padding: 8px 20px;
+    border-radius: 18px;
+  }
+
+  &:focus {
+    outline: none;
+    border-color: $purple;
+  }
+}
+
+textarea.form-control {
+  height: 270px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  resize: vertical;
+  @include phone-landscape {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 18px;
+    height: 180px;
+  }
+}
+
+.contact {
+  padding-bottom: 90px;
+  @include desktop {
+    padding-bottom: 70px;
+  }
+  &-form {
+    max-width: 810px;
+    margin-left: auto;
+  }
+  &-wrap {
+    margin-top: 80px;
+    @include phone-landscape {
+      margin-top: 40px;
+    }
+  }
+  &__item {
+    margin-bottom: 50px;
+    text-align: center;
+    @include phone-landscape {
+      margin-bottom: 30px;
+    }
+  }
+  &__icon {
+    width: 110px;
+    height: 110px;
+    border-radius: 100%;
+    background-color: $pure-black;
+    margin: 0 auto 40px;
+    @include phone-landscape {
+      margin-bottom: 20px;
+    }
+  }
+  &__name {
+    font-weight: 500;
+    font-size: 32px;
+    @include tablet {
+      font-size: 24px;
+    }
+  }
+  &__info {
+    font-size: 18px;
+    @include phone-landscape {
+      font-size: 16px;
+    }
+  }
+}

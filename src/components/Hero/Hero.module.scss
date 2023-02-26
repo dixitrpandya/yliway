@@ -1,0 +1,62 @@
+@import "./../../styles/variables";
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding-top: 120px;
+  padding-bottom: 120px;
+  @include desktop {
+    min-height: unset;
+  }
+  @include phone-landscape {
+    padding-top: 100px;
+    padding-bottom: 0;
+  }
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include phone-landscape {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  &Content {
+    align-self: flex-start;
+    padding-top: 50px;
+    @include phone-landscape {
+      padding-top: 0;
+      text-align: center;
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  }
+  h1 {
+    font-size: 150px;
+    font-weight: 400;
+    margin: 0;
+    @media (max-width: 1281px) {
+      font-size: 120px;
+    }
+    @include desktop {
+      font-size: 100px;
+    }
+    @include tablet {
+      font-size: 90px;
+    }
+    @include phone-landscape {
+      font-size: 70px;
+    }
+  }
+  &Vector {
+    position: relative;
+    @media (max-width: 1281px) {
+      img {
+        // width: auto;
+        height: auto;
+      }
+    }
+  }
+}

@@ -1,0 +1,106 @@
+@import "./../../styles/variables";
+
+.nav {
+  @include desktop {
+    margin-left: 0;
+    margin-right: 0;
+    order: 1;
+  }
+
+  .nav__list {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    @include desktop {
+      display: none;
+      background: $pure-white;
+      position: absolute;
+      right: 15px;
+      top: calc(100% + 8px);
+      padding: 10px 0 !important;
+      box-shadow: 0 0 0 3px $purple inset;
+      min-width: 220px;
+    }
+    @include phone-landscape {
+      width: 100vw;
+      right: 0;
+      box-shadow: 0 -3px 0 0 $purple inset;
+    }
+  }
+
+  &__item {
+    position: relative;
+    list-style-type: none;
+    margin: 0 20px;
+    @include desktop {
+      margin: 0;
+    }
+  }
+
+  &__link {
+    cursor: pointer;
+    color: $pure-black;
+    font-size: 18px;
+    font-weight: 500;
+    display: block;
+    padding: 12px 12px;
+    transition: all 0.2s ease-in;
+    @include desktop {
+      padding: 12px 15px;
+    }
+    &:hover {
+      color: $purple;
+    }
+  }
+}
+
+.nav__btnToggleIcon {
+  position: relative;
+  width: 18px;
+  height: 2px;
+  border-radius: 2px;
+  background-color: $purple;
+  display: block;
+  margin-left: auto;
+  transition: all 0.15s ease-out;
+
+  &::after,
+  &::before {
+    position: absolute;
+    content: "";
+    background-color: $purple;
+    width: 24px;
+    height: 2px;
+    right: 0;
+    border-radius: 2px;
+    transition: all 0.15s ease-out;
+  }
+  &::before {
+    top: 12px;
+  }
+  &::after {
+    bottom: 12px;
+  }
+}
+
+@include desktop {
+  .navIsShow {
+    .nav__btnToggle {
+      &Icon {
+        width: 0;
+        &::before {
+          transform: rotate(-45deg);
+          top: 0;
+        }
+        &::after {
+          transform: rotate(45deg);
+          bottom: 0;
+        }
+      }
+    }
+
+    .nav__list {
+      display: block;
+    }
+  }
+}

@@ -1,0 +1,25 @@
+.aboutus {
+  padding-top: 100px;
+
+  @include desktop {
+    padding-top: 80px;
+  }
+  .ab-content {
+    margin-top: 25px;
+    font-size: 20px;
+    color: rgba($pure-black, 0.6);
+    @include desktop {
+      font-size: 18px;
+      margin-top: 20px;
+    }
+    @include phone-landscape {
+      font-size: 16px;
+      margin-top: 16px;
+      margin-bottom: 20px;
+    }
+  }
+  img {
+    width: auto;
+    height: auto;
+  }
+}

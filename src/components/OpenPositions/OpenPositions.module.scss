@@ -1,0 +1,32 @@
+@import "./../../styles/variables";
+
+.open {
+  padding: 70px 0;
+}
+
+.header {
+  margin-bottom: 78px;
+  @include desktop {
+    margin-bottom: 50px;
+  }
+  @include phone-landscape {
+    margin-bottom: 30px;
+  }
+}
+
+.jobName {
+  margin-bottom: 12px;
+  font-size: 20px;
+  span {
+    font-size: 18px;
+  }
+}
+
+.jobDescription {
+  font-size: 18px;
+  margin-bottom: 35px;
+}
+
+.jobDetails {
+  margin-bottom: 50px;
+}

@@ -1,0 +1,85 @@
+.how-we-work {
+  background-color: #f9f9f9;
+  padding-top: 140px;
+  padding-bottom: 140px;
+
+  @include desktop {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  .how-subtext {
+    font-size: 22px;
+    line-height: normal;
+    margin-top: 10px;
+
+    @include desktop {
+      font-size: 18px;
+    }
+  }
+
+  .how-item {
+    &:hover {
+      .how-icon {
+        background-color: $purple;
+      }
+    }
+    @include phone-landscape {
+      margin-top: 40px;
+    }
+  }
+
+  .how-row {
+    margin-top: 60px;
+    @include tablet {
+      margin-top: 40px;
+    }
+    @include phone-landscape {
+      margin-top: 0;
+    }
+  }
+
+  .how-icon {
+    width: 162px;
+    height: 162px;
+    background-color: $pure-black;
+    border-radius: 100%;
+    margin: 0 auto 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include desktop {
+      width: 122px;
+      height: 122px;
+      margin-bottom: 25px;
+    }
+  }
+
+  .how-name {
+    font-size: 18px;
+    opacity: 0.6;
+    margin-bottom: 11px;
+    @include desktop {
+      font-size: 16px;
+    }
+  }
+
+  .how-title {
+    font-size: 32px;
+    font-weight: 500;
+    margin-bottom: 13px;
+    @include desktop {
+      font-size: 26px;
+      margin-bottom: 10px;
+    }
+  }
+
+  .how-desc {
+    font-size: 18px;
+    font-weight: 300;
+    @include desktop {
+      font-size: 16px;
+    }
+  }
+}

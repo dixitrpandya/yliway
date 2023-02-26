@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="162" height="162" viewBox="0 0 162 162">
+  <defs>
+    <clipPath id="clip-path">
+      <circle id="Oval" cx="81" cy="81" r="81"/>
+    </clipPath>
+  </defs>
+  <g id="image" clip-path="url(#clip-path)">
+    <g id="award" transform="translate(61 49)">
+      <circle id="Oval-2" data-name="Oval" cx="20.364" cy="20.364" r="20.364" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
+      <path id="Path" d="M3.52.029,0,26.531,14.545,17.8l14.545,8.727L25.571,0" transform="translate(5.818 37.469)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
+    </g>
+  </g>
+</svg>

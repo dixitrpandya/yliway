@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="162" height="162" viewBox="0 0 162 162">
+  <defs>
+    <clipPath id="clip-path">
+      <circle id="Oval" cx="81" cy="81" r="81" fill="#1c47fc"/>
+    </clipPath>
+  </defs>
+  <g id="image" clip-path="url(#clip-path)">
+    <g id="briefcase" transform="translate(49 52)">
+      <rect id="Rectangle" width="64" height="44.8" rx="2" transform="translate(0 12.8)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
+      <path id="Path" d="M25.6,57.6V6.4A6.4,6.4,0,0,0,19.2,0H6.4A6.4,6.4,0,0,0,0,6.4V57.6" transform="translate(19.2 0)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
+    </g>
+  </g>
+</svg>

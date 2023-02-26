@@ -1,0 +1,46 @@
+.team {
+  padding-top: 100px;
+  padding-bottom: 100px;
+
+  @include desktop {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  &-row {
+    margin-top: 50px;
+    @include desktop {
+      margin-top: 0;
+    }
+  }
+
+  &-item {
+    @include desktop {
+      margin-top: 40px;
+    }
+    @include phone-landscape {
+      text-align: center;
+    }
+  }
+
+  &-img {
+    margin-bottom: 30px;
+  }
+
+  &-role {
+    font-size: 14px;
+    opacity: 0.6;
+    margin-bottom: 8px;
+  }
+
+  &-name {
+    color: $purple;
+    font-size: 32px;
+    margin-bottom: 10px;
+    line-height: 1;
+
+    @include desktop {
+      font-size: 26px;
+    }
+  }
+}

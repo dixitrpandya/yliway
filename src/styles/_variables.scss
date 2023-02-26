@@ -1,0 +1,80 @@
+// FONT FAMILY
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;700&display=swap");
+
+$font-barlow: "Barlow", sans-serif;
+
+// COLORS
+$pure-white: #ffffff;
+$pure-black: #000000;
+$purple: #a401ff;
+$gray: #bbbbbb;
+$red: #ff0101;
+
+// BREAKPOINTS RESPONSIVE
+$phone-small: 374.98px;
+$phone: 575.98px;
+$phone-landscape: 767.98px;
+$tablet: 991.98px;
+$desktop: 1199.98px;
+$desktop-large: 1399.98px;
+
+$phone-small-up: 375px;
+$phone-up: 576px;
+$phone-landscape-up: 768px;
+$tablet-up: 992px;
+$desktop-up: 1200px;
+$desktop-large-up: 1400px;
+
+@mixin phone-small {
+  @media (max-width: #{$phone-small}) {
+    @content;
+  }
+}
+
+@mixin phone {
+  @media (max-width: #{$phone}) {
+    @content;
+  }
+}
+
+@mixin phone-landscape {
+  @media (max-width: #{$phone-landscape}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: #{$tablet}) {
+    @content;
+  }
+}
+
+@mixin tablet-up {
+  @media (min-width: #{$tablet-up}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (max-width: #{$desktop}) {
+    @content;
+  }
+}
+
+@mixin desktop-up {
+  @media (min-width: #{$desktop-up}) {
+    @content;
+  }
+}
+
+@mixin desktop-large {
+  @media (max-width: #{$desktop-large}) {
+    @content;
+  }
+}
+
+@mixin phone-landscape-up {
+  @media (min-width: #{$phone-landscape-up}) {
+    @content;
+  }
+}

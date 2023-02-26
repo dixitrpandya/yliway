@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="162" height="162" viewBox="0 0 162 162">
+  <defs>
+    <clipPath id="clip-path">
+      <circle id="Oval" cx="81" cy="81" r="81"/>
+    </clipPath>
+  </defs>
+  <g id="image" clip-path="url(#clip-path)">
+    <g id="cloud-lightning" transform="translate(51.649 52.002)">
+      <path id="Path" d="M48.017,42.4A13.333,13.333,0,0,0,45.351,16h-3.36A21.333,21.333,0,1,0,11,40" transform="translate(0)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
+      <path id="Path-2" data-name="Path" d="M10.667,0,0,16H16L5.333,32" transform="translate(21.351 26.665)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
+    </g>
+  </g>
+</svg>
